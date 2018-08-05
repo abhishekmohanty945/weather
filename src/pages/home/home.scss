@@ -1,0 +1,26 @@
+.home {
+ background:color($colors,light);
+}
+ 
+.temp {
+    font-size: 90px;
+    text-align: center;
+    font-weight: normal;
+}
+ 
+.icon, .location, .description {
+    text-align: center;
+}
+ 
+.icon img {
+    width:100px;
+}
+
+.location {
+    font-size: 40px;
+}
+
+.description {
+    font-size: 30px;
+}
+

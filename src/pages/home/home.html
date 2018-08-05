@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="title">Weather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+ 
+    <ion-grid *ngIf='loc'>
+    <ion-row>
+      <ion-col width-50 offset-25>
+        <h2 class="location" ion-text color="secondary">{{loc.name}}  </h2>
+        <h2 class="region" ion-text color="secondary">{{loc.region}}  </h2>
+        <div class="icon"> <img src="{{currentWeather.condition.icon}}" alt=""> </div>
+        <h2 class="description" ion-text color="secondary">{{currentWeather.condition.text}}</h2>
+        <h2 class="temp" ion-text color="secondary" >{{currentWeather.temp_c}}&deg;</h2>     
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list class="list">
+            <ion-item>
+                <strong>Wind Speed: </strong> {{currentWeather.wind_kph}} Kmph
+              </ion-item>
+          <ion-item>
+            <strong>Humidity: </strong> {{currentWeather.humidity}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
